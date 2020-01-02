@@ -19,3 +19,11 @@ forge 'https://forge.puppet.com'
 mod "puppet_autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
   :ref  =>  'master'
+
+mod "puppetlabs-stdlib",
+  :git  =>  'git@github.com:puppetlabs/puppetlabs-stdlib.git',
+  :ref  =>  'master'
+
+mod "puppetlabs-concat",
+  :git  =>  'git@github.com:puppetlabs/puppetlabs-concat.git',
+  :ref  =>  'master'
