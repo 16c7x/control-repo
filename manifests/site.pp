@@ -32,7 +32,5 @@ node default {
 
 node 'puppetmaster.lab' {
   notify { "Puppet Master": }
-node 'puppetmaster.lab' {
-  notify { "Puppet Master": }
   include ::profile::puppetmaster
 }
