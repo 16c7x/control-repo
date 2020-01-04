@@ -8,7 +8,7 @@ class profile::puppetmaster {
     notify  => Service['pe-puppetserver'],
   }
 
-  class { ::autosign:
+  class { autosign:
     ensure => 'latest',
     config => {
       'general' => {
