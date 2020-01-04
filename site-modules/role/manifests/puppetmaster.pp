@@ -1,4 +1,4 @@
-class role::pupetmaster {
+class role::puppetmaster {
 
   include profile::base
 
