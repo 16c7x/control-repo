@@ -27,3 +27,7 @@ mod "puppetlabs-stdlib",
 mod "puppetlabs-concat",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-concat.git',
   :ref  =>  'master'
+
+mod "puppetlabs-inifile",
+  :git  =>  'git@github.com:puppetlabs/puppetlabs-inifile.git',
+  :ref  =>  'master'
