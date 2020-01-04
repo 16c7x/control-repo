@@ -32,5 +32,5 @@ node default {
 
 node 'puppetmaster.lab' {
   notify { "Puppet Master": }
-  class { '::profile::base': }
+#  class { '::profile::base': }
 }
