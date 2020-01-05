@@ -32,7 +32,7 @@ mod "puppetlabs-inifile",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-inifile.git',
   :ref  =>  'master'
 
-mod "puppetmodulessh",
+mod "ssh",
   :git  =>  'git@github.com:ghoneycutt/puppet-module-ssh.git',
   :ref  =>  'master'
 
