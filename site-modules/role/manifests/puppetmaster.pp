@@ -3,5 +3,7 @@ class role::puppetmaster {
   class { '::selinux' :
     mode => 'disabled'
   }
-  class { '::ssh' : }
+  class { '::ssh' : 
+    sshd_x11_forwarding => 'yes',
+  }
 }
