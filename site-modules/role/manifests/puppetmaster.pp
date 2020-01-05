@@ -1,5 +1,6 @@
 class role::puppetmaster {
 
-  include profile::base
-
+  class { '::selinux' :
+    mode => 'disabled'
+    }
 }
