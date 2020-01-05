@@ -35,3 +35,7 @@ mod "puppetlabs-inifile",
 mod "puppetmodulessh",
   :git  =>  'git@github.com:ghoneycutt/puppet-module-ssh.git',
   :ref  =>  'master'
+
+mod "puppet-selinux",
+  :git  =>  'git@github.com:voxpupuli/puppet-selinux.git',
+  :ref  =>  'master'
