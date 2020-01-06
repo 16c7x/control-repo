@@ -1,6 +1,13 @@
 class profile::base {
 
-  class {'::ssh' : }
-  #the base profile should include component modules that will be on all nodes
+  notify { "Puppet Base Profile": }
+  
+  class { '::ssh' : 
+    sshd_x11_forwarding => 'yes',
+  }
+
+  class { '::selinux' :
+    mode => 'disabled'
+  }
 
 }
