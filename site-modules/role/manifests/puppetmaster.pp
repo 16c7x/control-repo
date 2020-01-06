@@ -1,5 +1,7 @@
 class role::puppetmaster {
 
+  notify { "Puppet Master Role": }
+
   class { '::selinux' :
     mode => 'disabled'
   }
