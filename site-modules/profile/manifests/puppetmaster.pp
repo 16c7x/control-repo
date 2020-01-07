@@ -5,7 +5,7 @@ class profile::puppetmaster {
 
   ini_setting { 'policy-based autosigning':
     setting => 'autosign',
-    path    => "${confdir}/puppet.conf",
+    path    => "${settings::confdir}/puppet.conf",
     section => 'master',
     value   => '/opt/puppetlabs/puppet/bin/autosign-validator',
     notify  => Service['pe-puppetserver'],
@@ -14,7 +14,7 @@ class profile::puppetmaster {
   class { ::autosign:
     ensure => 'latest',
     config => {
-      'general' => {
+      'general'  => {
       'loglevel' => 'INFO',
       },
       'jwt_token' => {
