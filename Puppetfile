@@ -16,7 +16,7 @@ forge 'https://forge.puppet.com'
 #  git:    'https://github.com/puppetlabs/puppetlabs-apache',
 #  branch: 'docs_experiment'
 
-mod "autosign",
+mod "puppetlabs-autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
   :ref  =>  'master'
 
