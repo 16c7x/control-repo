@@ -14,7 +14,7 @@ class profile::puppetmaster {
   class { ::autosign :
     ensure => 'latest',
     config => {
-      'general'  => {
+      'general'   => {
       'loglevel' => 'INFO',
       },
       'jwt_token' => {
