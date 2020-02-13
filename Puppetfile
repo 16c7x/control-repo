@@ -40,6 +40,6 @@ mod "puppet-selinux",
   :git  =>  'git@github.com:voxpupuli/puppet-selinux.git',
   :ref  =>  'master'
 
-mode "puppet-node_manager",
+mod "puppet-node_manager",
   :git  =>  'git@github.com:WhatsARanjit/puppet-node_manager.git',
   :ref  =>  'master'
