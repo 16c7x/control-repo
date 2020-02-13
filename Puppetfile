@@ -42,4 +42,4 @@ mod "puppet-selinux",
 
 mode "puppet-node_manager",
   :git  =>  'git@github.com:WhatsARanjit/puppet-node_manager.git',
-  :ref  =>. 'master'
+  :ref  =>  'master'
