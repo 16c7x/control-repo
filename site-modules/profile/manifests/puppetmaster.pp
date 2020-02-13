@@ -3,7 +3,7 @@ class profile::puppetmaster {
 
   notify { 'Puppet Master Profile': }
 
-  node_group { 'PE MCollective':
+  node_group { 'PE Compiler':
     ensure               => 'present',
     #classes              => {'puppet_enterprise::profile::mcollective::agent' => {}},
     environment          => 'production',
