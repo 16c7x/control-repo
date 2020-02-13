@@ -22,7 +22,7 @@ class profile::puppetmaster {
     ensure => 'latest',
     config => {
       general   => {
-      logleve' => 'INFO',
+      loglevel' => 'INFO',
       },
       jwt_token => {
         secret   => 'hunter2'
