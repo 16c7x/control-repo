@@ -3,11 +3,8 @@ class profile::puppetmaster {
 
   notify { 'Puppet Master Profile': }
 
-  node_group { 'PE Compiler':
-    ensure               => 'present',
-    environment          => 'production',
-    parent               => 'PE Master',
-    rule                 => ['and', ['~', ['fact', 'function'], 'compiler']],
+  node_group { 'PE Master':
+    rule                 => ['or',['=', 'name', 'puppetmaster']],
   }
 
   ini_setting { 'policy-based autosigning':
