@@ -21,15 +21,15 @@ class profile::puppetmaster {
     notify  => Service['pe-puppetserver'],
   }
 
-  class { ::autosign :
+  class { '::autosign' :
     ensure => 'latest',
     config => {
       'general'   => {
       'loglevel' => 'INFO',
       },
       'jwt_token' => {
-      'secret'   => 'hunter2'
-      #'validity' => '7200',
+        'secret'   => 'hunter2'
+        #'validity' => '7200',
       }
     },
   }
