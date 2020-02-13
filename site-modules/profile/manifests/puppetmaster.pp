@@ -26,7 +26,7 @@ class profile::puppetmaster {
       },
       'jwt_token' => {
         'secret'   => 'hunter2'
-        #'validity' => '7200',
+        'validity' => '7200',
       }
     },
   }
