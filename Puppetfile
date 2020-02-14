@@ -20,7 +20,7 @@ forge 'https://forge.puppet.com'
 #  :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
 #  :ref  =>  'master'
 
-mod "puppet-autosign",
+mod "puppet_autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
   :ref  =>  'master'
 
