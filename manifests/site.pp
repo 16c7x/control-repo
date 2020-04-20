@@ -35,7 +35,3 @@ node 'puppetmaster.lab' {
   include ::role::puppetmaster
 }
 
-node 'compile1.lab' {
-  notify { "Puppet Compiler": }
-  include ::role::puppetmaster
-}
