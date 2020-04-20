@@ -34,3 +34,8 @@ node 'puppetmaster.lab' {
   notify { "Puppet Master": }
   include ::role::puppetmaster
 }
+
+node 'compile1.lab' {
+  notify { "Puppet Compiler": }
+  include ::role::puppetmaster
+}
