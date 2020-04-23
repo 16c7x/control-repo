@@ -30,8 +30,4 @@ node default {
   #   class { 'my_class': }
 }
 
-node 'puppetmaster.lab' {
-  notify { "Puppet Master": }
-  include ::role::puppetmaster
-}
 
