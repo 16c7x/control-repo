@@ -1,12 +1,5 @@
 #
-class profile::puppetmaster {
-
-  notify { 'Puppet Master Profile': }
-
-# This works but is a bit crap.
-  node_group { 'PE Master':
-    rule    => ['or',['and',['=',['fact', 'function'],'compiler']],['=', 'name', 'puppetmaster.lab']],
-  }
+class profile::master::puppetmaster {
 
   ini_setting { 'policy-based autosigning':
     setting => 'autosign',
