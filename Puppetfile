@@ -24,6 +24,10 @@ mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
   :ref  =>  'master'
 
+mod "puppetserver_gem",
+  :git  =>  'git@github.com:puppetlabs/puppetlabs-puppetserver_gem.git',
+  :ref  =>  'master'
+
 mod "puppetlabs-stdlib",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-stdlib.git',
   :ref  =>  'master'
