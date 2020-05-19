@@ -13,7 +13,7 @@ class profile::master::nodegroups {
   }
   node_group { 'role::cd4pe':
     ensure               => 'present',
-    classes              => {'role::cd4pe' => {}},
+    classes              => {'role::lab_cd4pe' => {}},
     environment          => 'production',
     override_environment => false,
     parent               => 'All Nodes',
