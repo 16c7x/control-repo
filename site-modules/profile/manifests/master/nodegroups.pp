@@ -1,3 +1,4 @@
+# node manager configuration
 class profile::master::nodegroups {
 
   node_group { 'PE Master':
