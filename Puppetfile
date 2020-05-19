@@ -29,10 +29,6 @@ mod "puppetserver_gem",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-puppetserver_gem.git',
   :ref  =>  'master'
 
-mod "puppetlabs-stdlib",
-  :git  =>  'git@github.com:puppetlabs/puppetlabs-stdlib.git',
-  :ref  =>  'master'
-
 mod "puppetlabs-concat",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-concat.git',
   :ref  =>  'master'
