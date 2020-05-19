@@ -11,7 +11,7 @@ class profile::master::nodegroups {
     parent               => 'All Nodes',
     rule                 => ['and', ['=', ['fact', 'function'], 'controler']],
   }
-  node_group { 'role::cd4pe':
+  node_group { 'role::lab_cd4pe':
     ensure               => 'present',
     classes              => {'role::lab_cd4pe' => {}},
     environment          => 'production',
