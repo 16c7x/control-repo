@@ -14,7 +14,7 @@ mod 'puppetlabs-docker', '3.10.0'
 mod 'puppetlabs-apt', '7.4.1'
 mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.1.0'
-mod 'puppetlabs-choclatey', '5.0.2'
+mod 'puppetlabs-chocolatey', '5.0.2'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
