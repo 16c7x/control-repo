@@ -16,8 +16,8 @@ mod 'puppetlabs-translate', '2.2.0'
 mod 'puppetlabs-cd4pe_jobs', '1.1.0'
 mod 'puppetlabs-chocolatey', '5.0.2'
 mod 'puppetlabs-reboot', '3.0.0'
-mod 'puppetlabs-powershell', '3.0.1'
-#mod 'puppetlabs-registry', '3.1.0'
+#mod 'puppetlabs-powershell', '3.0.1'
+mod 'puppetlabs-registry', '3.1.0'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
