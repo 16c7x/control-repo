@@ -4,7 +4,7 @@ class profile::baseline::baseline {
 
   case $::osfamily {
     'windows': {
-      class { 'windows':}
+      class { 'profile::baseline::windows':}
     }
     'RedHat': {
       class { 'linux':}
