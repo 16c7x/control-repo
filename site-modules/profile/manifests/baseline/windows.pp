@@ -2,6 +2,8 @@
 class profile::baseline::windows {
   notify { 'windows baseline profile': }
 
+  require chocolatey
+
   Package { provider => chocolatey, }
 
   package { '7zip.install':
