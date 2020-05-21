@@ -7,7 +7,7 @@ class profile::baseline::baseline {
       class { 'profile::baseline::windows':}
     }
     'RedHat': {
-      class { 'linux':}
+      class { 'profile::baseline::linux':}
     }
     default: {
       notify { 'OS not supported': }
