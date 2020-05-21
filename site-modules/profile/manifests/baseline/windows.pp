@@ -13,4 +13,14 @@ class profile::baseline::windows {
   reboot { 'after7zip':
     subscribe  => Package['7zip.install'],
   }
+
+  group { 'localgrp':
+    ensure => present,
+  }
+
+  user { 'localusr':
+    ensure  => present,
+    comment => 'Local user',
+    group   => 'localgrp',
+  }
 }
