@@ -30,7 +30,7 @@ class profile::master::nodegroups {
   }
   node_group { 'role::windows_desktop':
     ensure               => 'present',
-    classes              => {'role::windows' => {}},
+    classes              => {'role::windows_desktop' => {}},
     environment          => 'production',
     override_environment => false,
     parent               => 'All Nodes',
