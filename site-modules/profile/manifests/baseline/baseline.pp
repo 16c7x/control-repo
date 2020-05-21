@@ -1,6 +1,6 @@
 #
 class profile::baseline::baseline {
-  notify { 'linux baseline profile': }
+  notify { 'baseline profile': }
 
   case $::osfamily {
     'windows': {
