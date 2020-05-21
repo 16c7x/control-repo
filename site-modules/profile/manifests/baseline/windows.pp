@@ -14,13 +14,13 @@ class profile::baseline::windows {
     subscribe  => Package['7zip.install'],
   }
 
-  group { 'Localgrp':
-    ensure => present,
-  }
+  #group { 'Localgrp':
+  #  ensure => present,
+  #}
 
   user { 'Localusr':
     ensure  => present,
+  #  group   => 'Localgrp',
     comment => 'Local user',
-    group   => 'Localgrp',
   }
 }
