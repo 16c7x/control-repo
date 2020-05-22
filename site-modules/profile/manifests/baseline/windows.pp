@@ -54,7 +54,7 @@ class profile::baseline::windows (
 
   acl { $localdirectory:
     permissions => [
-      { identity = $localuser, rights => ['full']}
+      { identity = $localuser, rights => ['full']},
       { identity = $localgroup, rights => ['read']}
     ],
   }
