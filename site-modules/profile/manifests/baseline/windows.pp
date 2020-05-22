@@ -7,20 +7,35 @@ class profile::baseline::windows {
   Package { provider => chocolatey, }
 
   package { '7zip.install':
-    ensure   => installed,
+    ensure => installed,
+    notify => Reboot['postinstall'],
   }
 
-  reboot { 'after7zip':
-    subscribe  => Package['7zip.install'],
+  package { 'git':
+    ensure => installed,
+    notify => Reboot['postinstall'],
   }
 
-  #group { 'Localgrp':
-  #  ensure => present,
-  #}
+  package { 'vscode': 
+    ensure => installed,
+    notify => Reboot['postinstall'],
+  }
 
-  user { 'Localusr':
-    ensure  => present,
+  package { 'pdk': 
+    ensure => installed,
+    notify => Reboot['postinstall'],
+  }
+  reboot { 'postinstall':
+    apply => finished,
+  }
+
+  group { 'Localgrp':
+    ensure => present,
+  }
+
+  #user { 'Localusr':
+  #  ensure  => present,
   #  group   => 'Localgrp',
-    comment => 'Local user',
-  }
+  #  comment => 'Local user',
+  #}
 }
