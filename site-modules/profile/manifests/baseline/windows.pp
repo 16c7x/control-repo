@@ -35,7 +35,7 @@ class profile::baseline::windows {
 
   user { 'Localusr':
     ensure  => present,
-    group   => 'Localgrp',
+    groups  => 'Localgrp',
     comment => 'Local user',
   }
 
