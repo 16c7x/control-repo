@@ -5,7 +5,7 @@
 class profile::baseline::windows (
   $localuser = 'bob',
   $localgroup = 'bobtastic',
-  $localdirectory = 'C:\Program Files\bobsthings', 
+  $localdirectory = 'C:\Program Files\bobsthings',
 ){
   notify { 'windows baseline profile': }
 
@@ -23,12 +23,12 @@ class profile::baseline::windows (
     notify => Reboot['postinstall'],
   }
 
-  package { 'vscode': 
+  package { 'vscode':
     ensure => installed,
     notify => Reboot['postinstall'],
   }
 
-  package { 'pdk': 
+  package { 'pdk':
     ensure => installed,
     notify => Reboot['postinstall'],
   }
@@ -57,6 +57,18 @@ class profile::baseline::windows (
       { identity => $localuser, rights => ['full']},
       { identity => $localgroup, rights => ['read']}
     ],
+  }
+
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
+    ensure => present,
+    type   => dword,
+    data   => '1',
+  }
+
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonUI':
+    ensure => present,
+    type   => dword,
+    data   => '1',
   }
 
 }
