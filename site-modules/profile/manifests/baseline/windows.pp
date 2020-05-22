@@ -1,6 +1,7 @@
 #
 # Had to put the whole path in a variable or Puppet complained about
 # unrecognised escape sequence. Don't think it likes Windows backwards shashes.
+#
 class profile::baseline::windows (
   $localuser = 'bob',
   $localgroup = 'bobtastic',
