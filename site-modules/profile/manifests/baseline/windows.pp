@@ -33,9 +33,10 @@ class profile::baseline::windows {
     ensure => present,
   }
 
-  #user { 'Localusr':
-  #  ensure  => present,
-  #  group   => 'Localgrp',
-  #  comment => 'Local user',
-  #}
+  user { 'Localusr':
+    ensure  => present,
+    group   => 'Localgrp',
+    comment => 'Local user',
+  }
+
 }
