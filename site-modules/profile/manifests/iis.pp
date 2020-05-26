@@ -30,6 +30,6 @@ class profile::iis {
   file {'index.html':
     ensure => 'file',
     path   => 'c:\\inetpub\\minimal\\index.html',
-    source => 'puppet:///site-modules/profile/index.html',
+    source => 'puppet:///site-modules/index.html',
   }
 }
