@@ -25,7 +25,12 @@ class profile::iis {
 
   file { 'animal':
     ensure => 'directory',
-    path   => ['c:\\inetpub\\animal','c:\\inetpub\\animal\\images'],
+    path   => 'c:\\inetpub\\animal',
+  }
+
+  file { 'images':
+    ensure => 'directory',
+    path   => 'c:\\inetpub\\animal\\images',
   }
 
   file {'index.html':
@@ -38,5 +43,12 @@ class profile::iis {
     ensure => 'file',
     path   => 'c:\\inetpub\\animal\\images\\animal.gif',
     source => 'puppet:///site-modules/animal.gif',
+  }
+
+  iis_virtual_directory { 'vdir':
+    ensure       => 'present',
+    sitename     => 'animal',
+    physicalpath => 'c:\\inetpub\\animal\\images',
+    require      => File['images'],
   }
 }
