@@ -15,6 +15,7 @@ class profile::iis {
   iis_site { 'minimal':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\minimal',
+    defaultpage     => 'index.html',
     applicationpool => 'DefaultAppPool',
     require         => [
       File['minimal'],
