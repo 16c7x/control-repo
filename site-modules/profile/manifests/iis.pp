@@ -19,7 +19,7 @@ class profile::iis {
     require         => [
       File['minimal'],
       Iis_site['Default Web Site']
-    ],
+    ],10
   }
 
   file { 'minimal':
