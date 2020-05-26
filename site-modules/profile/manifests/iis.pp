@@ -32,4 +32,10 @@ class profile::iis {
     path   => 'c:\\inetpub\\minimal\\index.html',
     source => 'puppet:///site-modules/index.html',
   }
+
+  file {'animal.gif':
+    ensure => 'file',
+    path   => 'c:\\inetpub\\minimal\\animal.gif',
+    source => 'puppet:///site-modules/animal.gif',
+  }
 }
