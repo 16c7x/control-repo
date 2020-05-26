@@ -23,7 +23,7 @@ class profile::iis {
     ]
   }
 
-  file { 'minimal':
+  file { 'animal':
     ensure => 'directory',
     path   => 'c:\\inetpub\\animal',
   }
