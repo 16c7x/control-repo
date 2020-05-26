@@ -2,21 +2,30 @@
 class profile::master::puppetmaster {
 
   ini_setting { '[site-modules] path':
-    ensure            => present,
+    ensure  => present,
     key_val_separator => ' ',
-    section           => 'site-modules',
-    setting           => 'path',
-    value             => '/etc/puppetlabs/code/environments/production/site-modules/profile/files',
-    path              => '/etc/puppetlabs/puppet/fileserver.conf',
+    section => 'site-modules',
+    setting => 'path',
+    value   => '/etc/puppetlabs/code/environments/production/site-modules/profile/files',
+    path    => '/etc/puppetlabs/puppet/fileserver.conf',
   }
 
   ini_setting { '[site-modules] allow':
-    ensure            => present,
+    ensure  => present,
     key_val_separator => ' ',
-    section           => 'site-modules',
-    setting           => 'allow',
-    value             => '*',
-    path              => '/etc/puppetlabs/puppet/fileserver.conf ',
+    section => 'site-modules',
+    setting => 'allow',
+    value   => '*',
+    path    => '/etc/puppetlabs/puppet/fileserver.conf',
+  }
+
+  ini_setting { '[site-modules] allow':
+    ensure  => present,
+    key_val_separator => ' ',
+    section => 'site-modules',
+    setting => 'allow',
+    value   => '/etc/test',
+    path    => '/etc/puppetlabs/puppet/fileserver.conf',
   }
 
   ini_setting { 'policy-based autosigning':
