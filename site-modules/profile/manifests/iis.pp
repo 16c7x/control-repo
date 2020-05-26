@@ -1,4 +1,4 @@
-# cd4pe
+# iis
 class profile::iis {
 
   $iis_features = ['Web-WebServer','Web-Scripting-Tools']
