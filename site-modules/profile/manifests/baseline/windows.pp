@@ -7,8 +7,6 @@ class profile::baseline::windows (
   $localgroup = 'bobtastic',
   $localdirectory = 'C:\Program Files\bobsthings',
 ){
-  notify { 'windows baseline profile': }
-
   require chocolatey
 
   Package { provider => chocolatey, }
@@ -32,6 +30,7 @@ class profile::baseline::windows (
     ensure => installed,
     notify => Reboot['postinstall'],
   }
+
   reboot { 'postinstall':
     apply => finished,
   }
@@ -70,5 +69,9 @@ class profile::baseline::windows (
     type   => dword,
     data   => '1',
   }
+
+###########################
+# IIS stuff her but break out into another profile
+
 
 }
