@@ -69,9 +69,4 @@ class profile::baseline::windows (
     type   => dword,
     data   => '1',
   }
-
-###########################
-# IIS stuff her but break out into another profile
-
-
 }

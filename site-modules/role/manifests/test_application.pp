@@ -1,5 +1,4 @@
 # 
 class role::test_application {
   include ::profile::baseline::baseline
-  notify { 'Test Application': }
 }
