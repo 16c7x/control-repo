@@ -1,4 +1,4 @@
 #
-class role::windows_desktop {
+class role::windows_webservice {
   include ::profile::baseline::baseline
 }
