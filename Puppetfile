@@ -19,6 +19,7 @@ mod 'puppetlabs-powershell', '3.0.1'
 mod 'puppetlabs-pwshlib', '0.4.1'
 mod 'puppetlabs-registry', '3.1.0'
 mod 'puppetlabs-acl', '3.1.1'
+mod 'puppet-windowsfeature', '3.2.2'
 
 mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
