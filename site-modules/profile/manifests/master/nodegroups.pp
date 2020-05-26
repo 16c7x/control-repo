@@ -28,14 +28,6 @@ class profile::master::nodegroups {
     parent               => 'All Nodes',
     rule                 => ['and', ['=', ['fact', 'function'], 'testapp']],
   }
-  node_group { 'role::windows_desktop':
-    ensure               => 'present',
-    classes              => {'role::windows_desktop' => {}},
-    environment          => 'production',
-    override_environment => false,
-    parent               => 'All Nodes',
-    rule                 => ['and', ['=', ['fact', 'function'], 'windows_desktop']],
-  }
   node_group { 'role::windows_webservice':
     ensure               => 'present',
     classes              => {'role::windows_webservice' => {}},
@@ -43,5 +35,13 @@ class profile::master::nodegroups {
     override_environment => false,
     parent               => 'All Nodes',
     rule                 => ['and', ['=', ['fact', 'function'], 'windows_webservice']],
+  }
+  node_group { 'role::windows_desktop':
+    ensure               => 'present',
+    classes              => {'role::windows_desktop' => {}},
+    environment          => 'production',
+    override_environment => false,
+    parent               => 'All Nodes',
+    rule                 => ['and', ['=', ['fact', 'function'], 'windows_desktop']],
   }
 }
