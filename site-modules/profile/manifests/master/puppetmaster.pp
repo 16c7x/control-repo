@@ -1,7 +1,7 @@
 #
 class profile::master::puppetmaster {
 
-  ini_setting { '[site-modules] path':
+  ini_setting { 'site-modules-path':
     ensure  => present,
     key_val_separator => ' ',
     section => 'site-modules',
@@ -10,16 +10,7 @@ class profile::master::puppetmaster {
     path    => '/etc/puppetlabs/puppet/fileserver.conf',
   }
 
-  ini_setting { '[site-modules] allow':
-    ensure  => present,
-    key_val_separator => ' ',
-    section => 'site-modules',
-    setting => 'allow',
-    value   => '*',
-    path    => '/etc/puppetlabs/puppet/fileserver.conf',
-  }
-
-  ini_setting { '[site-modules] test':
+  ini_setting { 'site-modules-allow':
     ensure  => present,
     key_val_separator => ' ',
     section => 'site-modules',
