@@ -24,7 +24,7 @@ class profile::master::puppetmaster {
     key_val_separator => ' ',
     section => 'site-modules',
     setting => 'allow',
-    value   => '/etc/test',
+    value   => '*',
     path    => '/etc/puppetlabs/puppet/fileserver.conf',
   }
 
