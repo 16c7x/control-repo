@@ -15,7 +15,7 @@ class profile::iis {
   iis_site { 'animal':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\animal',
-    defaultpage     => 'index.html',
+    #defaultpage     => 'index.html',
     applicationpool => 'DefaultAppPool',
     require         => [
       File['animal'],
