@@ -22,6 +22,7 @@ mod 'puppetlabs-registry', '3.1.0'
 mod 'puppetlabs-acl', '3.1.1'
 mod 'puppet-windowsfeature', '3.2.2'
 mod 'puppetlabs-iis', '7.0.1'
+mod 'ayohrling-local_security_policy', '0.6.3'
 
 mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
