@@ -74,6 +74,6 @@ class profile::baseline::windows (
     ensure         => 'present',
     policy_setting => 'ServiceLogonRight',
     policy_type    => 'Privilege Rights',
-    policy_value   => 'cloudbase-init, bob, IIS APPPOOL\DefaultAppPool, NT SERVICE\ALL SERVICES,',
+    policy_value   => "cloudbase-init, ${localuser}, IIS APPPOOL\DefaultAppPool, NT SERVICE\ALL SERVICES",
   }
 }
