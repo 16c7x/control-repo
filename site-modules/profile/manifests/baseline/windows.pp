@@ -69,4 +69,11 @@ class profile::baseline::windows (
     type   => dword,
     data   => '1',
   }
+
+  local_security_policy { 'Log on as a service':
+    ensure         => 'present',
+    policy_setting => 'ServiceLogonRight',
+    policy_type    => 'Privilege Rights',
+    policy_value   => 'cloudbase-init, bob, IIS APPPOOL\DefaultAppPool, NT SERVICE\ALL SERVICES,',
+  }
 }
