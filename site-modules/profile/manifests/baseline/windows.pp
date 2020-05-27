@@ -70,6 +70,7 @@ class profile::baseline::windows (
     data   => '1',
   }
 
+# it's here: Control Panel > Administrative Tools > Local Security Policy > Local Policies > User Rights Assignment
   local_security_policy { 'Log on as a service':
     ensure         => 'present',
     policy_setting => 'ServiceLogonRight',
