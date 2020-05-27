@@ -1,8 +1,7 @@
-# iis
+# This class sets up an iis webservice.
 class profile::iis {
 
   $iis_features = ['Web-WebServer','Web-Scripting-Tools']
-
   windowsfeature { $iis_features:
     ensure => present,
   }
@@ -15,7 +14,7 @@ class profile::iis {
   iis_site { 'animal':
     ensure          => 'started',
     physicalpath    => 'c:\\inetpub\\animal',
-    #defaultpage     => 'index.html',
+    #defaultpage     => 'index.html',   # This doesn't appear to be idempotent. 
     applicationpool => 'DefaultAppPool',
     require         => [
       File['animal'],

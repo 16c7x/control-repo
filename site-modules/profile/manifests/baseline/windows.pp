@@ -7,8 +7,8 @@ class profile::baseline::windows (
   $localgroup = 'bobtastic',
   $localdirectory = 'C:\Program Files\bobsthings',
 ){
+  # Install chocolatey and then set it as our default package provider.
   require chocolatey
-
   Package { provider => chocolatey, }
 
   package { '7zip.install':
@@ -35,6 +35,7 @@ class profile::baseline::windows (
     apply => finished,
   }
 
+# Setup out local user, group and directory. 
   group { $localgroup:
     ensure => present,
   }
@@ -58,6 +59,7 @@ class profile::baseline::windows (
     ],
   }
 
+# Enable Shutdown tracker
   registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows NT\Reliability\ShutdownReasonOn':
     ensure => present,
     type   => dword,
@@ -70,7 +72,23 @@ class profile::baseline::windows (
     data   => '1',
   }
 
-# it's here: Control Panel > Administrative Tools > Local Security Policy > Local Policies > User Rights Assignment
+# Enable IE ESC
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\\{A509B1A7-37EF-4b3f-8CFC-4F3A74704073}':
+    ensure => present,
+    value  => 'IsInstalled',
+    type   => dword,
+    data   => '1',
+  }
+
+  registry_value { 'HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Active Setup\Installed Components\\{A509B1A8-37EF-4b3f-8CFC-4F3A74704073}':
+    ensure => present,
+    value  => 'IsInstalled',
+    type   => dword,
+    data   => '1',
+  }
+
+# Give our user login as a service rights.
+# It's here: Control Panel > Administrative Tools > Local Security Policy > Local Policies > User Rights Assignment
   local_security_policy { 'Log on as a service':
     ensure         => 'present',
     policy_setting => 'ServiceLogonRight',
