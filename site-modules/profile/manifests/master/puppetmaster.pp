@@ -44,14 +44,14 @@ class profile::master::puppetmaster {
   }
 
 # Ensure the eyaml keys have the right perms.
-  file {'/etc/puppetlabs/puppet/eyaml/private_key.pkcs7.pem':
+  file {'/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem':
     ensure => file,
     owner  => 'root',
     group  => 'pe-puppet',
     mode   => '0440',
   }
 
-  file {'/etc/puppetlabs/puppet/eyaml/public_key.pkcs7.pem':
+  file {'/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem':
     ensure => file,
     owner  => 'root',
     group  => 'root',
