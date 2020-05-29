@@ -1,15 +1,19 @@
 ---
-version: 5
-
-defaults:
-  datadir: "data"
-  data_hash: yaml_data
-hierarchy:
-  - name: "Eyaml backend"
-    data_hash: eyaml_data
+  version: 5
+  hierarchy:
+  - name: Eyaml backend
+    lookup_key: eyaml_lookup_key
     paths:
-      - "nodes/%{trusted.certname}.yaml"
-      - "common.yaml
-  options:
+    - "nodes/%{::trusted.certname}.yaml"
+    - 'common.yaml'
+    datadir: "/etc/puppetlabs/code/environments/%{environment}/data"
+    options:
+      extension: yaml
       pkcs7_private_key: "/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem"
-      pkcs7_public_key: "/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem"     
+      pkcs7_public_key: "/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem"
+  - name: Yaml backend
+    data_hash: yaml_data
+    paths:
+    - "nodes/%{::trusted.certname}.yaml"
+    - 'common.yaml'
+    datadir: "/etc/puppetlabs/code/environments/%{environment}/data"
