@@ -47,3 +47,12 @@ mod "puppet-selinux",
 mod "puppet-node_manager",
   :git  =>  'git@github.com:WhatsARanjit/puppet-node_manager.git',
   :ref  =>  'master'
+
+#### Some prosvcs modules for generating reports  
+mod "module_audit",
+  :git  =>  'git@github.com:16c7x/prosvc-module_audit.git',
+  :ref  =>  'master'
+
+mod "adviser",
+  :git  =>  'git@github.com:16c7x/prosvc-adviser.git',
+  :ref  =>  'master'
