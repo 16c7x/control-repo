@@ -1,7 +1,7 @@
 ---
 message: ENC[PKCS7,MIIBeQYJKoZIhvcNAQcDoIIBajCCAWYCAQAxggEhMIIBHQIBADAFMAACAQEwDQYJKoZIhvcNAQEBBQAEggEAbuZ44eFtyht5ENnSRcyZLyaLRbb8CWBTBkc0lOUQWfEgXEuvRqVu6NZChZYKZjGeVvufNGzpUEf/89qSPDbt784ib/ej6JQsji3pKjpWoWH2gfF8+O+lifJMoJkjRI15ZXTMcsTGZxADVYGuHPT6QOP7OTdC7Pu7BWVWRehNS8l8KvS98lJhAq10OUaQoNHZpgMlxcm462bEc5jLYGaE/fioL4fAVBYhmkZcDQ5I80QkkecpWdpwUOPhv73EAWwt45/44JHSemVO9oWwaIGh5gTY0yvY+Vc87IHDxizmLh7Ka4JHNmOBJVqWt80HFvudIngQ+WiNv9EgmS8zbBAJcTA8BgkqhkiG9w0BBwEwHQYJYIZIAWUDBAEqBBBT45RHROnWqUji9ot2pQH5gBD1/INL+o8tCIzaowIViLGh]
 
-profile::master::pupetmaster::private_key: >
+profile::master::pupetmaster::private_key: |
 -----BEGIN RSA PRIVATE KEY-----
     MIIEowIBAAKCAQEApROKXZ8scBufYHWkNCUwRXASdGbvgSU5xXcSEjLSNGMNlRnT
     TCRanAycKvdOKG3g91a8dTyl7UF1ZjF0Do05LdQrDnJJ6vNRcg9FKB6akgNJS7xS
@@ -30,7 +30,7 @@ profile::master::pupetmaster::private_key: >
     LMcePBCmDu/K/KmZ/ENvapO0yuF4B3YLSHL3MGd09V2I9qBRHXfb
     -----END RSA PRIVATE KEY-----
 
-profile::master::pupetmaster::public_key: >
+profile::master::pupetmaster::public_key: |
 -----BEGIN CERTIFICATE-----
     MIIC2TCCAcGgAwIBAgIBATANBgkqhkiG9w0BAQsFADAAMCAXDTIwMDUyNzE1MTg0
     N1oYDzIwNzAwNTE1MTUxODQ3WjAAMIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIB
