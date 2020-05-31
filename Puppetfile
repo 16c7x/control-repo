@@ -49,10 +49,10 @@ mod "puppet-node_manager",
   :ref  =>  'master'
 
 #### Some prosvcs modules for generating reports  
-#mod "module_audit",
-#  :git  =>  'git@github.com:16c7x/prosvc-module_audit.git',
-#  :ref  =>  'master'
-#
-#mod "adviser",
-#  :git  =>  'git@github.com:16c7x/prosvc-adviser.git',
-#  :ref  =>  'master'
+mod "module_audit",
+  :git  =>  'git@github.com:16c7x/prosvc-module_audit.git',
+  :ref  =>  'master'
+
+mod "adviser",
+  :git  =>  'git@github.com:16c7x/prosvc-adviser.git',
+  :ref  =>  'master'

@@ -1,8 +1,7 @@
 #
 class profile::master::puppetmaster {
 
-# Normaly this would be in a module but to keep things in one place the file share will come from 
-# profile so need to add it to the file share list.
+# To keep everything in one place and not have to create a seperate module I'll file share a file from profile.
   ini_setting { 'site-modules-path':
     ensure            => present,
     key_val_separator => ' ',
@@ -45,16 +44,18 @@ class profile::master::puppetmaster {
 
 # Ensure the eyaml keys have the right perms.
   file {'/etc/puppetlabs/puppet/keys/private_key.pkcs7.pem':
-    ensure => file,
-    owner  => 'root',
-    group  => 'pe-puppet',
-    mode   => '0440',
+    ensure  => file,
+    owner   => 'root',
+    group   => 'pe-puppet',
+    mode    => '0440',
+    content => lookup('profile::master::pupetmaster::private_key'),
   }
 
   file {'/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem':
-    ensure => file,
-    owner  => 'root',
-    group  => 'root',
-    mode   => '0444',
+    ensure  => file,
+    owner   => 'root',
+    group   => 'root',
+    mode    => '0444',
+    content => lookup('profile::master::pupetmaster::public_key'),
   }
 }
