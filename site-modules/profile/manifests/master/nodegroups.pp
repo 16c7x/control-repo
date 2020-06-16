@@ -1,9 +1,9 @@
 # node manager configuration
 class profile::master::nodegroups {
 
-  node_group { 'PE Master':
-    rule                 => ['and', ['=', ['fact', 'function'], 'compiler']],
-  }
+#  node_group { 'PE Master':
+#    rule                 => ['and', ['=', ['fact', 'function'], 'compiler']],
+#  }
   node_group { 'PE Controler':
     ensure               => 'present',
     classes              => {'puppet_enterprise::profile::controller' => {}},
