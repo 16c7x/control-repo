@@ -5,7 +5,7 @@ class profile::master::nodegroups {
 #    rule                 => ['and', ['=', ['fact', 'function'], 'compiler']],
 #  }
 
-$ruleshash = node_manager::node_groups('PE Master')
+$ruleshash = node_groups('PE Master')
 $myrules = $ruleshash['PE Master']['rule']
 
 # There is a mix of strings and tuples so need to normalize.
