@@ -1,0 +1,33 @@
+classes:
+  - role::lab_cd4pe
+  - role::all_in_one_pe
+  - role::windows_webservice
+  - role::test_application
+  - role::windows_desktop
+
+nodes:
+  - windows-10-64
+  - CentOS-7.0-64
+
+class_groups:
+  windows_roles:
+    - role::windows_desktop
+    - role::windows_webservice
+  linux_roles:
+    - role::lab_cd4pe
+    - role::all_in_one_pe
+    - role::test_application
+
+node_groups:
+  windows_nodes:
+    - windows-10-64
+  linux_nodes:
+    - CentOS-7.0-64
+
+test_matrix:
+  - linux_nodes: 
+      classes: 'linux_roles'
+      tests: 'spec'
+  - windows_nodes: 
+      classes: 'windows_roles'
+      tests: 'spec'

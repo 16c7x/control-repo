@@ -9,6 +9,11 @@ class profile::baseline::windows (
 ){
   # Install chocolatey and then set it as our default package provider.
   require chocolatey
+
+
+  class {'chocolatey':
+  choco_install_location => 'D:\secured\choco',
+}
   Package { provider => chocolatey, }
 
   package { '7zip.install':

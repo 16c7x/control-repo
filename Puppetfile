@@ -3,7 +3,7 @@ forge 'https://forge.puppet.com'
 # Versions should be updated to be the latest at the time you start
 
 # General Puppet requirements
-mod 'puppetlabs-stdlib', '6.3.0'
+mod 'puppetlabs-stdlib', '5.2.0'
 mod 'puppetlabs-concat', '6.2.0'
 # Requirements for cd4pe
 mod 'puppetlabs-cd4pe', '2.0.0'
@@ -23,6 +23,11 @@ mod 'puppetlabs-acl', '3.1.1'
 mod 'puppet-windowsfeature', '3.2.2'
 mod 'puppetlabs-iis', '7.0.1'
 mod 'ayohrling-local_security_policy', '0.6.3'
+mod 'saz-ssh', '6.2.0'
+# Core modules to keep tests happy
+mod 'puppetlabs-sshkeys_core', '2.1.0'
+mod 'puppetlabs-yumrepo_core', '1.0.7'
+
 
 mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
@@ -36,9 +41,9 @@ mod "puppetlabs-inifile",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-inifile.git',
   :ref  =>  'master'
 
-mod "ssh",
-  :git  =>  'git@github.com:ghoneycutt/puppet-module-ssh.git',
-  :ref  =>  'master'
+#mod "ssh",
+#  :git  =>  'git@github.com:ghoneycutt/puppet-module-ssh.git',
+#  :ref  =>  'master'
 
 mod "puppet-selinux",
   :git  =>  'git@github.com:voxpupuli/puppet-selinux.git',

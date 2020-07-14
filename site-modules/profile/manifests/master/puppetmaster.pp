@@ -48,7 +48,7 @@ class profile::master::puppetmaster {
     owner   => 'root',
     group   => 'pe-puppet',
     mode    => '0440',
-    content => lookup('profile::master::pupetmaster::private_key'),
+    content => lookup('profile::master::puppetmaster::private_key'),
   }
 
   file {'/etc/puppetlabs/puppet/keys/public_key.pkcs7.pem':
@@ -56,6 +56,6 @@ class profile::master::puppetmaster {
     owner   => 'root',
     group   => 'root',
     mode    => '0444',
-    content => lookup('profile::master::pupetmaster::public_key'),
+    content => lookup('profile::master::puppetmaster::public_key'),
   }
 }

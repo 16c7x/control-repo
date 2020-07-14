@@ -36,6 +36,7 @@ class profile::iis {
     ensure => 'file',
     path   => 'c:\\inetpub\\animal\\index.html',
     source => 'puppet:///site-modules/index.html',
+    #source => 'puppet:///modules/profile/index.html',
   }
 
   file {'animal.gif':
