@@ -1,9 +1,27 @@
 # node manager configuration
 class profile::master::nodegroups {
 
-  node_group { 'PE Master':
-    rule                 => ['and', ['=', ['fact', 'function'], 'compiler']],
-  }
+#  node_group { 'PE Master':
+#    rule                 => ['and', ['=', ['fact', 'function'], 'compiler']],
+#  }
+
+$ruleshash = node_groups('PE Master')
+$myrules = $ruleshash['PE Master']['rule']
+
+# There is a mix of strings and tuples so need to normalize.
+$rulesarray = $myrules.map |$x| { String($x)}
+
+# Test if we have the compiler rule in place
+if ! ("['=', ['fact', 'function'], 'compiler']" in $rulesarray) {
+  $mynewrules = $myrules + [['=', ['fact', 'function'], 'compiler']]
+} else {
+  $mynewrules = $myrules
+}
+
+node_group { 'PE Master':
+  rule                 => $mynewrules,
+}
+
   node_group { 'PE Controler':
     ensure               => 'present',
     classes              => {'puppet_enterprise::profile::controller' => {}},
