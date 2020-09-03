@@ -28,6 +28,7 @@ mod 'saz-ssh', '6.2.0'
 mod 'puppetlabs-sshkeys_core', '2.1.0'
 mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'binford2k-node_encrypt', '0.4.1'
+mod 'puppetlabs-inifile', '4.2.0'
 
 mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
@@ -35,10 +36,6 @@ mod "autosign",
 
 mod "puppetserver_gem",
   :git  =>  'git@github.com:puppetlabs/puppetlabs-puppetserver_gem.git',
-  :ref  =>  'master'
-
-mod "puppetlabs-inifile",
-  :git  =>  'git@github.com:puppetlabs/puppetlabs-inifile.git',
   :ref  =>  'master'
 
 #mod "ssh",

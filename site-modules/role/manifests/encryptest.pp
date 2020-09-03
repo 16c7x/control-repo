@@ -1,4 +1,4 @@
 #
-class role::encrypt {
+class role::encryptest {
   include ::profile::encrypt
 }

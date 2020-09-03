@@ -62,4 +62,13 @@ node_group { 'PE Master':
     parent               => 'All Nodes',
     rule                 => ['and', ['=', ['fact', 'function'], 'windows_desktop']],
   }
+
+  node_group { 'role::encryptest':
+    ensure               => 'present',
+    classes              => {'role::encryptest' => {}},
+    environment          => 'production',
+    override_environment => false,
+    parent               => 'All Nodes',
+    rule                 => ['and', ['=', ['fact', 'function'], 'encrypt']],
+  }
 }
