@@ -9,11 +9,7 @@ class profile::baseline::windows (
 ){
   # Install chocolatey and then set it as our default package provider.
   require chocolatey
-
-
-  class {'chocolatey':
-  choco_install_location => 'D:\secured\choco',
-}
+  #class {'chocolatey': }
   Package { provider => chocolatey, }
 
   package { '7zip.install':
@@ -94,10 +90,10 @@ class profile::baseline::windows (
 
 # Give our user login as a service rights.
 # It's here: Control Panel > Administrative Tools > Local Security Policy > Local Policies > User Rights Assignment
-  local_security_policy { 'Log on as a service':
-    ensure         => 'present',
-    policy_setting => 'ServiceLogonRight',
-    policy_type    => 'Privilege Rights',
-    policy_value   => "cloudbase-init, ${localuser}, IIS APPPOOL\DefaultAppPool, NT SERVICE\ALL SERVICES",
-  }
+#  local_security_policy { 'Log on as a service':
+#    ensure         => 'present',
+#    policy_setting => 'ServiceLogonRight',
+#    policy_type    => 'Privilege Rights',
+#    policy_value   => "cloudbase-init, ${localuser}, IIS APPPOOL\DefaultAppPool, NT SERVICE\ALL SERVICES",
+#  }
 }

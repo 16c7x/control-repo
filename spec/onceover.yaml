@@ -6,7 +6,7 @@ classes:
   - role::windows_desktop
 
 nodes:
-  - windows-10-64
+  - windev
   - CentOS-7.0-64
 
 class_groups:
@@ -20,7 +20,7 @@ class_groups:
 
 node_groups:
   windows_nodes:
-    - windows-10-64
+    - windev
   linux_nodes:
     - CentOS-7.0-64
 
