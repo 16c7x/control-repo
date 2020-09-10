@@ -1,6 +1,6 @@
 # cd4pe
 class profile::gitlab_server {
   class { 'gitlab':
-    external_url => 'http://gitlab.mydomain.tld',
+    external_url => 'http://gitlab-dev.platform9.puppet.net',
   }
 }
