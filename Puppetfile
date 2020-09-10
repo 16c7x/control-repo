@@ -29,6 +29,7 @@ mod 'puppetlabs-sshkeys_core', '2.1.0'
 mod 'puppetlabs-yumrepo_core', '1.0.7'
 mod 'binford2k-node_encrypt', '0.4.1'
 mod 'puppetlabs-inifile', '4.2.0'
+mod 'puppet-gitlab', '5.1.0'
 
 mod "autosign",
   :git  =>  'git@github.com:danieldreier/puppet-autosign.git',
