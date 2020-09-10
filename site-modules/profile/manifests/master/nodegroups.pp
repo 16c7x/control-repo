@@ -72,9 +72,9 @@ node_group { 'PE Master':
     rule                 => ['and', ['=', ['fact', 'function'], 'encrypt']],
   }
   
-   node_group { 'role::gitlab_dev':
+   node_group { 'role::dev_gitlab':
     ensure               => 'present',
-    classes              => {'role::gitlab_dev' => {}},
+    classes              => {'role::dev_gitlab' => {}},
     environment          => 'production',
     override_environment => false,
     parent               => 'All Nodes',
