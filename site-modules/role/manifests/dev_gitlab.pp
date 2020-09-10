@@ -1,4 +1,4 @@
 #
 class role::dev_gitlab {
-  include ::profile::gitlab
+  include ::profile::gitlab_server
 }
