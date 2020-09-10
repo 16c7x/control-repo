@@ -1,4 +1,4 @@
 #
-class role::prod_gitlab {
+class role::dev_gitlab {
   include ::profile::gitlab
 }
