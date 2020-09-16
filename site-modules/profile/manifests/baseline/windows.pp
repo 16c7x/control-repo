@@ -31,6 +31,11 @@ class profile::baseline::windows (
     ensure => installed,
     notify => Reboot['postinstall'],
   }
+  
+  package { 'puppet-bolt':
+    ensure => installed,
+    notify => Reboot['postinstall'],
+  }
 
   reboot { 'postinstall':
     apply => finished,
@@ -44,7 +49,7 @@ class profile::baseline::windows (
   user { $localuser:
     ensure  => present,
     groups  => $localgroup,
-    comment => 'Bob is a knob',
+    comment => 'Bob's account',
   }
 
   file { $localdirectory:
