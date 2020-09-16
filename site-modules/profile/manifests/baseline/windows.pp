@@ -49,7 +49,7 @@ class profile::baseline::windows (
   user { $localuser:
     ensure  => present,
     groups  => $localgroup,
-    comment => 'Bob's account',
+    comment => "Bob's account",
   }
 
   file { $localdirectory:
