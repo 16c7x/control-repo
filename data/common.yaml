@@ -16,7 +16,7 @@ gitlab::gitlab_rails:
  #     issuer: 'https://gitlab.example.com'
  #     name_identifier_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
  
-secure_linux_cis::rules::ensure_mounting_of_cramfs_filesystems_is_disabled: false
+secure_linux_cis::rules::ensure_mounting_of_cramfs_filesystems_is_disabled::enforced: false
 secure_linux_cis::rules::ensure_mounting_of_squashfs_filesystems_is_disabled: false
 secure_linux_cis::rules::ensure_mounting_of_udf_filesystems_is_disabled: false
 secure_linux_cis::rules::ensure_tmp_is_configured: false
