@@ -17,7 +17,7 @@ gitlab::gitlab_rails:
  #     name_identifier_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
 
 secure_linux_cis::rules::ensure_bootloader_password_is_set::enforced: true
-secure_linux_cis::rules::ensure_mounting_of_cramfs_filesystems_is_disabled::enforced: true
+secure_linux_cis::rules::ensure_mounting_of_cramfs_filesystems_is_disabled::enforced: false
 
 
 profile::master::puppetmaster::private_key: |
