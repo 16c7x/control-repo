@@ -15,8 +15,7 @@ gitlab::gitlab_rails:
  #     idp_sso_target_url: 'https://gitlab.oktapreview.com/app/gitlabdev773716_gitlabsaml_1/exk8odl81tBrjpD4B0h7/sso/saml'
  #     issuer: 'https://gitlab.example.com'
  #     name_identifier_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
-
-secure_linux_cis::firewall_package: firewalld
+secure_linux_cis::rules::ensure_a_firewall_package_is_installed::enforced: false
 secure_linux_cis::rules::ensure_mounting_of_cramfs_filesystems_is_disabled::enforced: false
 secure_linux_cis::rules::ensure_mounting_of_squashfs_filesystems_is_disabled::enforced: false
 secure_linux_cis::rules::ensure_mounting_of_udf_filesystems_is_disabled::enforced: false
