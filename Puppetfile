@@ -31,6 +31,7 @@ mod 'binford2k-node_encrypt', '0.4.1'
 mod 'puppetlabs-inifile', '4.2.0'
 mod 'puppet-gitlab', '5.1.0'
 mod 'fervid-secure_linux_cis', '2.1.15'
+mod 'puppetlabs-haproxy', '4.3.0'
 
 mod "cis_profile",
   :git  =>  'git@github.com:16c7x/cis_profile.git',
