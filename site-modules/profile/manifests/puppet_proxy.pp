@@ -1,7 +1,7 @@
 #
 class profile::puppet_proxy{
   include ::haproxy
-  haproxy::listen { 'proxy1':
+  haproxy::listen { 'puppet00':
     collect_exported => false,
     ipaddress        => $::ipaddress,
     ports            => '8140',
@@ -16,7 +16,7 @@ class profile::puppet_proxy{
   haproxy::balancermember { 'compiler2':
     listening_service => 'puppet00',
     server_names      => 'compiler2.platform9.puppet.net',
-    ipaddresses       => '10.234.5.149',
+    ipaddresses       => '10.234.5.140',
     ports             => '8140',
     options           => 'check',
   }
