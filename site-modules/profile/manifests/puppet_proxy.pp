@@ -17,7 +17,7 @@ class profile::puppet_proxy{
     listening_service => 'puppet00',
     server_names      => 'compiler2.platform9.puppet.net',
     ipaddresses       => '192.168.0.27',
-    ports             => '22',
+    ports             => '8140',
     options           => 'check',
   }
 }
