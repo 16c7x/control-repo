@@ -6,13 +6,13 @@ class profile::puppet_proxy{
     ipaddress        => $::ipaddress,
     ports            => '8140',
   }
-  #haproxy::balancermember { 'compiler1':
-  #  listening_service => 'puppet00',
-  #  server_names      => 'compiler1.platform9.puppet.net',
-  #  ipaddresses       => '192.168.0.6',
-  #  ports             => '8140',
-  #  options           => 'check',
-  #}
+  haproxy::balancermember { 'compiler1':
+    listening_service => 'puppet00',
+    server_names      => 'compiler1.platform9.puppet.net',
+    ipaddresses       => '192.168.0.6',
+    ports             => '8140',
+    options           => 'check',
+  }
   haproxy::balancermember { 'compiler2':
     listening_service => 'puppet00',
     server_names      => 'peubuntu1804.platform9.puppet.net',
