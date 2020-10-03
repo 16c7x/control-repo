@@ -18,7 +18,7 @@ gitlab::gitlab_rails:
 
 # code manager settings
 puppet_enterprise::master::code_manager::deploy_pool_size: 4
-puppet_enterprise::master::code_manager::timeouts_deploy: 1
+puppet_enterprise::master::code_manager::timeouts_deploy: 300
 
 profile::master::puppetmaster::private_key: |
     -----BEGIN RSA PRIVATE KEY-----
