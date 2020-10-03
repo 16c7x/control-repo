@@ -16,6 +16,10 @@ gitlab::gitlab_rails:
  #     issuer: 'https://gitlab.example.com'
  #     name_identifier_format: 'urn:oasis:names:tc:SAML:2.0:nameid-format:transient'
 
+# code manager settings
+puppet_enterprise::master::code_manager::deploy_pool_size: 4
+puppet_enterprise::master::code_manager::timeouts_deploy: 1
+
 profile::master::puppetmaster::private_key: |
     -----BEGIN RSA PRIVATE KEY-----
     MIIEowIBAAKCAQEApROKXZ8scBufYHWkNCUwRXASdGbvgSU5xXcSEjLSNGMNlRnT
