@@ -80,4 +80,13 @@ node_group { 'PE Master':
     parent               => 'All Nodes',
     rule                 => ['and', ['=', ['fact', 'function'], 'gitlab']],
   }
+  
+   node_group { 'role::cis_test':
+    ensure               => 'present',
+    classes              => {'role::cis_test' => {}},
+    environment          => 'production',
+    override_environment => false,
+    parent               => 'All Nodes',
+    rule                 => ['and', ['=', ['fact', 'function'], 'cis']],
+  }
 }
