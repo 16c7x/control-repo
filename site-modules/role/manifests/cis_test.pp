@@ -1,5 +1,5 @@
 # 
 class role::cis_test {
-  notice("role cis_test")
+  notify { "some message": }
   include ::cis_profile
 }
