@@ -71,3 +71,7 @@ mod "module_audit",
 mod "adviser",
   :git  =>  'git@github.com:16c7x/prosvc-adviser.git',
   :ref  =>  'master'
+
+mod "ordering",
+  :git  =>  'git@github.com:16c7x/ordering.git',
+  :ref  =>  'master'
