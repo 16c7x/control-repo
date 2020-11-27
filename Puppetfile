@@ -35,6 +35,10 @@ mod 'puppetlabs-haproxy', '4.3.0'
 # Some stuff for testing
 mod 'puppetlabs-sqlserver', '2.6.2'
 
+mod "oratune",
+  :git. =>  'git@github.com:16c7x/oratune.git',
+  :ref  =>  'main'
+
 mod "cis_profile",
   :git  =>  'git@github.com:16c7x/cis_profile.git',
   :ref  =>  'master'
