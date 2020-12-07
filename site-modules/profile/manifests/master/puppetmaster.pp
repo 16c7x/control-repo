@@ -1,6 +1,10 @@
 #
 class profile::master::puppetmaster {
 
+# Add this at some point
+# puppet_enterprise::profile::console::rbac_session_timeout
+
+
 # To keep everything in one place and not have to create a seperate module I'll file share a file from profile.
   ini_setting { 'site-modules-path':
     ensure            => present,
