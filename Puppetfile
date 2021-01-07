@@ -79,3 +79,8 @@ mod "adviser",
 mod "ordering",
   :git  =>  'git@github.com:16c7x/ordering.git',
   :ref  =>  'main'
+
+mod "factconverter",
+  :git  =>  'git@github.com:16c7x/factconverter.git',
+  :ref  =>  'main'
+
